@@ -1,14 +1,14 @@
 const { ContentType, FieldType } = require('@include/hearth');
 
-const events = new ContentType({
-  name: 'events',
-  singularDisplayName: 'Event',
-  pluralDisplayName: 'Events',
+const products = new ContentType({
+  name: 'products',
+  singularDisplayName: 'Product',
+  pluralDisplayName: 'Products',
 });
 
-events
+products
   .createField({
-    name: 'main_image',
+    name: 'image',
     displayName: 'Image',
     type: FieldType.MEDIA_LIST,
     required: true,
@@ -20,8 +20,20 @@ events
     required: true,
   })
   .createField({
-    name: 'date',
-    displayName: 'Date',
+    name: 'price',
+    displayName: 'Price',
+    type: FieldType.SHORT_TEXT,
+    required: true,
+  })
+  .createField({
+    name: 'size',
+    displayName: 'Size',
+    type: FieldType.SHORT_TEXT,
+    required: true,
+  })
+  .createField({
+    name: 'category',
+    displayName: 'Category',
     type: FieldType.SHORT_TEXT,
     required: true,
   })
@@ -32,4 +44,4 @@ events
     required: true,
   });
 
-module.exports = events;
+module.exports = products;
