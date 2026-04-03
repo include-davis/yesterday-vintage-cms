@@ -5,7 +5,7 @@ on:
     types: [published]
 
 jobs:
-  deploy_staging:
+  deploy_production:
     name: Deploy Production
     runs-on: ubuntu-latest
     environment:
@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Install node
         uses: actions/setup-node@v4
         with:
@@ -46,4 +46,4 @@ jobs:
           --build-env MONGO_CONNECTION_STRING=${{ secrets.MONGO_CONNECTION_STRING }}
 
       - name: Success
-        run: echo "🚀  Deploy successful 🚀 "
+        run: echo "Deploy successful"
