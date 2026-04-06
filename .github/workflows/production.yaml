@@ -29,6 +29,9 @@ jobs:
         env:
           MONGO_CONNECTION_STRING: ${{ secrets.MONGO_CONNECTION_STRING }}
 
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
       - name: Publish to Vercel
         working-directory: ./runtime-environment
         run: >
