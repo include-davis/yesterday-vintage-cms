@@ -47,5 +47,6 @@ jobs:
           --env JWT_SECRET=${{ secrets.JWT_SECRET }}
           --build-env MONGO_CONNECTION_STRING=${{ secrets.MONGO_CONNECTION_STRING }}
 
+
       - name: Success
         run: echo "Deploy successful"
