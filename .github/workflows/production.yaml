@@ -37,6 +37,7 @@ jobs:
         run: >
           vercel
           --token ${{ secrets.VERCEL_TOKEN }}
+          --project ${{ vars.VERCEL_PROJECT }}
           --yes
           --prod
           --env MONGO_CONNECTION_STRING=${{ secrets.MONGO_CONNECTION_STRING }}
