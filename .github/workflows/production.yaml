@@ -37,7 +37,7 @@ jobs:
         run: >
           vercel
           --token ${{ secrets.VERCEL_TOKEN }}
-          --scope includedavis-projects
+          -n ${{ vars.VERCEL_PROJECT }}
           --yes
           --prod
           --env MONGO_CONNECTION_STRING=${{ secrets.MONGO_CONNECTION_STRING }}
@@ -45,7 +45,6 @@ jobs:
           --env CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}
           --env CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}
           --env JWT_SECRET=${{ secrets.JWT_SECRET }}
-          --env REVALIDATE_URL=${{ vars.REVALIDATE_URL }}
           --build-env MONGO_CONNECTION_STRING=${{ secrets.MONGO_CONNECTION_STRING }}
 
       - name: Success
