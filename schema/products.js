@@ -14,8 +14,8 @@ products
     required: true,
   })
   .createField({
-    name: 'title',
-    displayName: 'Title',
+    name: 'name',
+    displayName: 'Name',
     type: FieldType.SHORT_TEXT,
     required: true,
   })
@@ -26,10 +26,10 @@ products
     required: true,
   })
   .createField({
-    name: 'size',
-    displayName: 'Size',
-    type: FieldType.SHORT_TEXT,
-    required: true,
+    name: 'options',
+    displayName: 'Options',
+    type: FieldType.LONG_TEXT,
+    required: false,
   })
   .createField({
     name: 'category',
